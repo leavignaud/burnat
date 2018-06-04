@@ -1,0 +1,97 @@
+html{
+  font-size: 62.5%; /* Ré-équilibrage du Rem face au Pixel pour des calculs simples */
+}
+
+body{
+  font-family: 'Raleway', sans-serif;
+  height: 100vh;
+}
+
+header{
+  display: inline-block;
+  width: 20%;
+  position: fixed;
+  margin: 7px;
+
+  @media only screen and (min-device-width : 640px) and (max-device-width : 770px) {
+    display: block;
+    width: 90%;
+    position: static;
+    text-align: center;
+  }
+
+  @media only screen and (min-device-width : 320px) and (max-device-width : 640px) {
+    display: block;
+    width: 90%;
+    position: static;
+    text-align: center;
+  }
+
+  .title{
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    font-size: 3.0rem;
+  }
+
+  .sub_title{
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    font-size: 1.9rem;
+  }
+
+  .nav_bar {
+    display: inline-block;
+    margin-top: 50px;
+
+      ul {
+        padding: 0;
+        li {
+          list-style: none;
+          text-transform: uppercase;
+          font-size: 1.9rem;
+          letter-spacing: 1.5px;
+
+            a {
+              text-decoration: none;
+              color: black;
+            }
+
+            a:hover{
+              font-weight: bold;
+            }
+          }
+
+        li:first-child{
+          margin-bottom: 30px;
+        }
+    }
+  }
+}
+
+.bar_flags{
+  ul{
+    padding: 0;
+    li{
+      list-style: none;
+      display: inline-block;
+    }
+    a{
+      text-decoration: none;
+    }
+  }
+}
+
+.credits{
+  font-size: 1.2rem;
+
+  @media only screen and (min-device-width : 640px) and (max-device-width : 770px) {
+    display: none;
+  }
+
+  @media only screen and (min-device-width : 320px) and (max-device-width : 640px) {
+    display: none;
+  }
+}

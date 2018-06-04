@@ -1,0 +1,68 @@
+
+.bigGrid{
+  width: 80%;
+  position: absolute;
+  top: 10px;
+  left: 20%;
+
+  @media only screen and (min-device-width : 640px) and (max-device-width : 770px) {
+    position: static;
+    width: 100%;
+  }
+
+  @media only screen and (min-device-width : 320px) and (max-device-width : 640px) {
+    position: static;
+    width: 100%;
+  }
+}
+.grid-item, .grid-sizer {
+  width: 33%;
+  padding: 7px;
+
+  @media only screen and (min-device-width : 640px) and (max-device-width : 770px) {
+    width: 50%;
+  }
+
+  @media only screen and (min-device-width : 320px) and (max-device-width : 640px) {
+    width: 100%;
+  }
+
+  img{
+    width: 100%;
+    height: auto;
+    border-image: 0;
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
+}
+
+#biofrafia{
+  background-color: white;
+  z-index: 1;
+  width: 80%;
+  display: none;
+
+  .img-header{
+    width: 80%;
+
+    img{
+      width: 80%;
+    }
+  }
+
+  .biofrafie-c{
+    margin-top: 30px;
+    font-size: 16px;
+    max-width: 900px;
+    column-count: 2;
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 70px;
+    text-align: justify;
+
+    p{
+      margin-bottom: 15px;
+    }
+  }
+}
