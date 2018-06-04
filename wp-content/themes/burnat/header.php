@@ -18,10 +18,10 @@
             <nav class="nav_bar">
                 <ul>
                     <li>
-                        <a onclick="myFunction()">Biografia</a>
+                        <a href="#biografia" id="link-biografia">Biografia</a>
                     </li>
                     <li>
-                        <a href="#">Galeria</a>
+                        <a href="#" id="link-galeria" class="active">Galeria</a>
                     </li>
                 </ul>
             </nav>

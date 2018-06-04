@@ -13,19 +13,19 @@ header{
   position: fixed;
   margin: 7px;
 
-  @media only screen and (min-device-width : 640px) and (max-device-width : 770px) {
+  .breakpoint-tablet({
     display: block;
     width: 90%;
     position: static;
     text-align: center;
-  }
+  });
 
-  @media only screen and (min-device-width : 320px) and (max-device-width : 640px) {
+  .breakpoint-mobile({
     display: block;
     width: 90%;
     position: static;
     text-align: center;
-  }
+  });
 
   .title{
     text-transform: uppercase;
@@ -54,18 +54,26 @@ header{
           font-size: 1.9rem;
           letter-spacing: 1.5px;
 
-            a {
-              text-decoration: none;
-              color: black;
-            }
+          .breakpoint-mobile({
+            display: inline-block;
+          });
 
-            a:hover{
+          a {
+            text-decoration: none;
+            color: black;
+
+            &.active{
+              text-decoration: underline;
               font-weight: bold;
             }
           }
+        }
 
         li:first-child{
           margin-bottom: 30px;
+          .breakpoint-mobile({
+            margin-right: 15px;
+          });
         }
     }
   }
@@ -87,11 +95,11 @@ header{
 .credits{
   font-size: 1.2rem;
 
-  @media only screen and (min-device-width : 640px) and (max-device-width : 770px) {
+  .breakpoint-tablet({
     display: none;
-  }
+  });
 
-  @media only screen and (min-device-width : 320px) and (max-device-width : 640px) {
+  .breakpoint-mobile({
     display: none;
-  }
+  });
 }
