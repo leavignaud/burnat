@@ -7,12 +7,12 @@ the_post(); ?>
 <div class="big-grid" id="biofrafia">
     <div class="big-grid_container">
         <div class="img-header">
-            <img src="wp-content/themes/burnat/assets/images/header.jpg" alt="image header biografia">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/header.jpg" alt="image header biografia">
         </div>
         <div class="biofrafie-c">
             <h1 class="title">BIOGRAFIA</h1>
             <?php the_content(); ?>
-            <img src="wp-content/themes/burnat/assets/images/artiste.jpg" alt="image artiste" class="image-artist">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/artiste.jpg" alt="image artiste" class="image-artist">
         </div>
 
     </div>
@@ -25,7 +25,7 @@ the_post(); ?>
         <?php foreach ($galerie as $idx=>$photo) { ?>
             <div class="grid-item">
                 <div class="grid-item_image">
-                    <img class="galeria-image" data-index="<?php echo $idx; ?>" src="<?php echo $photo["sizes"]["medium_large"] ?>" data-large-src="<?php echo $photo["sizes"]["large"] ?>" alt="">
+                    <img alt="<?php echo $photo['title']; ?>" class="galeria-image" data-name="" data-index="<?php echo $idx; ?>" src="<?php echo $photo["sizes"]["medium_large"] ?>" data-large-src="<?php echo $photo["sizes"]["large"] ?>" alt="">
                 </div>
             </div>
         <?php } ?>
@@ -34,6 +34,7 @@ the_post(); ?>
 
 
 <div class="popin">
+    <div class="title"></div>
     <div class="close-button">
         <p>x</p>
     </div>
@@ -44,6 +45,7 @@ the_post(); ?>
         <p> > </p>
     </div>
     <div class="img-c">
+        <span><?php the_field('title'); ?></span>
         <img src="" alt="">
     </div>
 </div>

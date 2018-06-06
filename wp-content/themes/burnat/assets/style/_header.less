@@ -8,10 +8,11 @@ body{
 }
 
 header{
-  display: inline-block;
   width: 20%;
   position: fixed;
   margin: 7px;
+  top: 0;
+  bottom: 0;
 
   .breakpoint-tablet({
     display: block;
@@ -92,14 +93,30 @@ header{
   }
 }
 
-.credits{
-  font-size: 1.2rem;
 
-  .breakpoint-tablet({
-    display: none;
-  });
+.container_footer{
+  bottom: 0px;
+  position: absolute;
 
-  .breakpoint-mobile({
-    display: none;
-  });
+  .credits{
+    font-size: 1.2rem;
+
+    .breakpoint-tablet({
+      display: none;
+    });
+
+    .breakpoint-mobile({
+      display: none;
+    });
+  }
+
+  .languages{
+    font-size: 50px;
+    text-transform: uppercase;
+    
+      a{
+        text-decoration: none;
+      }
+  }
 }
+

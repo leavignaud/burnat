@@ -14,6 +14,7 @@
         <header>
             <h1 class="title">Ksenia Burnat</h1>
             <h2 class="sub_title">Escultora Ceramista</h2>
+            <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/pastille.png" alt=""></div>
 
             <nav class="nav_bar">
                 <ul>
@@ -50,9 +51,21 @@
                     </li>
                 </ul>
             </div>
-            <div class="credits">
-                <p>
-                    Crédits : Léa Vignaud
-                </p>
+            <div class="container_footer">
+                <div class="languages">
+                    <?php $languages =  icl_get_languages('skip_missing=0');
+                    $nb = 0;
+                    foreach($languages as $lang): ?>
+                        <a class="element noajax no-ajax <?php if(ICL_LANGUAGE_CODE == $lang['code']) echo 'active'; ?>" href='<?php echo $lang['url'] ?>'>
+                            <img src="<?php echo $lang['country_flag_url']; ?>">
+                        </a>
+                        <?php $nb++;
+                    endforeach; ?>
+                </div>
+                <div class="credits">
+                    <p>
+                        Crédits : Léa Vignaud
+                    </p>
+                </div>
             </div>
         </header>

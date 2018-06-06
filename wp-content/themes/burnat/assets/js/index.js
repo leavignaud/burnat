@@ -57,6 +57,7 @@ var slideshow = {
         _self.$popin = $('.popin')
         _self.$imgC = _self.$popin.find('.img-c')
         _self.$img = _self.$popin.find('img')
+        _self.$title = _self.$popin.find('.title')
 
         _self.$close = _self.$popin.find('.close-button')
         _self.$left = _self.$popin.find('.arrow--left')
@@ -69,8 +70,11 @@ var slideshow = {
         _self.imageIndex = 0
 
         _self.$galeriaImages.on('click', function(){
-            _self.imageIndex = parseInt($(this).attr('data-index'), 10)
-            _self.open($(this).attr('data-large-src'))
+            if($(window).width()>640){
+                _self.imageIndex = parseInt($(this).attr('data-index'), 10)
+                _self.open($(this).attr('data-large-src'), $(this).attr('alt'))
+
+            }
         })
 
         _self.$left.on('click', function(){
@@ -82,14 +86,19 @@ var slideshow = {
         _self.$close.on('click', function(){
             _self.close()
         })
+        $(window).on('resize',function(){
+            _self.resize()
+        })
 
     },
-    open: function(src){
+    open: function(src, title){
         var _self = this
 
         _self.$popin.stop().fadeIn()
 
         _self.$img.attr('src', src)
+
+        _self.$title.text(title)
 
     },
     next: function(){
@@ -99,6 +108,8 @@ var slideshow = {
 
         _self.$img.attr('src', _self.$galeriaImages.eq(_self.imageIndex).attr('data-large-src'))
 
+        _self.$title.text(_self.$galeriaImages.eq(_self.imageIndex).attr('alt'))
+
     },
     prev: function(){
         var _self = this
@@ -106,6 +117,8 @@ var slideshow = {
         _self.imageIndex = _self.imageIndex > 0 ? _self.imageIndex-1 : _self.$galeriaImages.length-1;
 
         _self.$img.attr('src', _self.$galeriaImages.eq(_self.imageIndex).attr('data-large-src'))
+
+        _self.$title.text(_self.$galeriaImages.eq(_self.imageIndex).attr('alt'))
 
     },
     close: function(){
@@ -117,7 +130,7 @@ var slideshow = {
     resize: function(){
         var _self = this
 
-        _self.$imgC.css({lineHeight: $(window).height() + "px"})
+        _self.$imgC.css({lineHeight: $(window).height()-50 + "px"})
 
     }
 }

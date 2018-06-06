@@ -138,10 +138,11 @@ body {
   height: 100vh;
 }
 header {
-  display: inline-block;
   width: 20%;
   position: fixed;
   margin: 7px;
+  top: 0;
+  bottom: 0;
 }
 @media only screen and (max-width: 1023px) {
   header {
@@ -216,18 +217,29 @@ header .nav_bar ul li:first-child {
 .bar_flags ul a {
   text-decoration: none;
 }
-.credits {
+.container_footer {
+  bottom: 0px;
+  position: absolute;
+}
+.container_footer .credits {
   font-size: 1.2rem;
 }
 @media only screen and (max-width: 1023px) {
-  .credits {
+  .container_footer .credits {
     display: none;
   }
 }
 @media only screen and (max-width: 640px) {
-  .credits {
+  .container_footer .credits {
     display: none;
   }
+}
+.container_footer .languages {
+  font-size: 50px;
+  text-transform: uppercase;
+}
+.container_footer .languages a {
+  text-decoration: none;
 }
 .big-grid {
   left: 20%;
@@ -326,6 +338,16 @@ header .nav_bar ul li:first-child {
   z-index: 50;
   background: rgba(255, 255, 255, 0.7);
 }
+.popin .title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
 .popin .close-button {
   position: absolute;
   top: 20px;
@@ -345,6 +367,7 @@ header .nav_bar ul li:first-child {
   width: 100%;
   height: 100%;
   text-align: center;
+  padding-bottom: 50px;
 }
 .popin .img-c img {
   max-width: 95%;
@@ -353,6 +376,13 @@ header .nav_bar ul li:first-child {
   height: auto;
   display: inline-block;
   vertical-align: middle;
+}
+@media only screen and (max-width: 1023px) {
+  .popin {
+    left: 0;
+    position: fixed;
+    width: 100%;
+  }
 }
 .popin p {
   font-size: 25px;
