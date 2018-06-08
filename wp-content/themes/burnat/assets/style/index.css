@@ -166,6 +166,10 @@ header .title {
   letter-spacing: 1.1px;
   font-size: 3.0rem;
 }
+header .little-image {
+  max-width: 200px;
+  padding: 10px;
+}
 header .sub_title {
   margin: 0;
   text-transform: uppercase;
@@ -221,8 +225,15 @@ header .nav_bar ul li:first-child {
   bottom: 0px;
   position: absolute;
 }
+.container_footer .contact {
+  font-size: 1.6rem;
+}
+.container_footer .contact .picto_mail {
+  width: 20px;
+  margin: 5px 10px 0 0;
+}
 .container_footer .credits {
-  font-size: 1.2rem;
+  font-size: 1.0rem;
 }
 @media only screen and (max-width: 1023px) {
   .container_footer .credits {

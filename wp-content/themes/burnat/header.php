@@ -14,7 +14,7 @@
         <header>
             <h1 class="title">Ksenia Burnat</h1>
             <h2 class="sub_title">Escultora Ceramista</h2>
-            <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/pastille.png" alt=""></div>
+            <div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/artiste.jpg" alt="image artiste" class="little-image"></div>
 
             <nav class="nav_bar">
                 <ul>
@@ -27,31 +27,10 @@
                 </ul>
             </nav>
 
-            <div class="bar_flags">
-                <ul>
-                    <li class="espagnol-flag">
-                        <a href="">
-                            <img src="images/fr.png" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="images/fr.png" alt="">
-                        </a>
-                    </li>
-                    <li class="uk-flag">
-                        <a href="">
-                            <img src="/images/uk.png" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="images/fr.png" alt="">
-                        </a>
-                    </li>
-                </ul>
-            </div>
+
             <div class="container_footer">
+                <p class="contact"><img class="picto_mail" src="<?php echo get_template_directory_uri(); ?>/assets/images/message.svg">ksenia.burnat@gmail.com</p>
+
                 <div class="languages">
                     <?php $languages =  icl_get_languages('skip_missing=0');
                     $nb = 0;
